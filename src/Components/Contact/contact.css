@@ -1,0 +1,203 @@
+.container.contact__container{
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+    /* border: 3px solid #111; */
+
+}
+.contact__options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact__option{
+    /* background: var(--color-bg-variant); */
+    padding: 1rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    /* border: 1px solid transparent; */
+    /* transition: var(--transition); */
+  
+
+}
+
+/* .contact__option:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+} */
+
+.contact__option-icon{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem ;
+}
+
+.contact__option a {
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+
+
+.glow-on-hover {
+    width: 230px;
+    height: 190px;
+    border: none;
+    outline: none;
+    /* color: #000; */
+    /* background: transparent; */
+    cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39,
+    auto;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    /* background: var(--color-bg-variant); */
+   
+
+}
+
+.glow-on-hover:before {
+
+   
+ content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px; 
+    /* color: #000; */
+}
+
+.glow-on-hover:active {
+    color: yellow;
+}
+
+.glow-on-hover:active:after {
+    /* background: transparent; */
+    background: #111;
+   
+
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+     z-index: -1; 
+     content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    /* background: #111; */
+    /* background: var(--color-bg-variant);  */
+    
+     left: 0;
+    top: 0;
+    border-radius: 10px;   
+    /* border: 2px solid var(--color-bg-variant); */
+    box-shadow: 0 7px 8px rgba(10, 10, 10, 0.774) !important; 
+
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.button {
+    display: inline-flex;
+    height: 50px;
+    width: 170px;
+    /* border: 1px solid #BFC0C0; */
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    /* text-transform: uppercase; */
+    /* text-decoration: none; */
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+    /* background: #2D3142; */
+    background: transparent;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  button {
+    color: yellowgreen!important;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 6px;
+    border-bottom: 2px solid #8c9494;
+  }
+
+  button:hover{
+    color: #00ffd5!important;
+  }
+
+
+  #arrow-hover {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    transform: translateX(50px);
+    opacity: 0;
+    -webkit-transition: all .25s cubic-bezier(.14, .59, 1, 1.01);
+    transition: all .15s cubic-bezier(.14, .59, 1, 1.01);
+    margin: 0;
+    padding: 0;
+  }
+  button#button-1:hover img {
+    width: 25px;
+    opacity: 1;
+    transform: translateX(68px);
+  }
+  
+
+/* ============== FORM  ==============*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+    resize: none;
+    color: var(--color-white);
+}
+
+/* =========MEDIA QUERIES(MEDIUM DEVICES)=========== */
+
+@media screen and (max-width: 1024px) {
+    .container.contact__container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+  }
+  
+  /* =========MEDIA QUERIES(SMALL DEVICES)=========== */
+  
+  @media screen and (max-width: 600px) {
+    .container.contact__container{
+       width: var(--container-width-sm);
+    }
+  }
+  

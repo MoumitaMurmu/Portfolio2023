@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
+
+
+
+/* ===========HEADER============ */
+
+header{
+    height: 100vh;
+    padding-top: 4rem;
+    overflow: hidden;
+    /* border: 1px solid yellow; */
+   
+}
+.header__container{
+    text-align: center;
+    height: 100%;
+}
+
+
+
+/* ==========CTA========== */
+
+.cta{
+    /* margin-top: 3rem; */
+    /* border: 1px solid yellow; */
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: center;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    
+
+}
+
+/* ==========HEADER SOCIALS========== */
+
+.header__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 4rem;
+    bottom: 3rem;
+}
+
+.header__socials::after{
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+
+
+
+/* ==========CARD Typing =============*/
+
+
+/* =========BOOK GIF============= */
+  .book{
+    cursor:not-allowed;
+
+  }
+
+
+/*=======================ID CARD=================== */
+
+.idCard{
+    display:flex;
+    flex-direction:column;
+    width: 30%;
+    border:2px solid lightgrey;
+    border-radius:10px;
+   bottom: 7rem;
+    position: absolute;
+    left: 30rem;
+    cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39,
+auto;
+
+box-shadow: 0px 4px 8px rgba(7, 7, 7, 0.2);
+
+}
+
+.idCardTop{
+padding:20px;
+width:100%;
+background-color:#ededed;
+font-size: 180%;
+border-bottom:1px solid grey;
+height:25px;
+border-top-left-radius: 10px;
+align-items: center;
+justify-content:start;
+border-top-right-radius:10px;
+display:flex;
+
+}
+
+
+
+
+
+/* ==========SCROLL DOWN========== */
+
+.scroll__down{
+    position: absolute;
+    right: 2rem;
+    bottom: 7rem;
+    letter-spacing: 8px;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #4db5ff;
+}
+
+
+
+
+
+
+/* ===========CONTINIOUS WORD============ */
+ .IntroComponent{
+  margin-top: 10%;
+  
+  display: flex;
+  
+
+}
+.headingIntro{
+  font-size: 20px;
+  animation: fadein 2s,heading 2s;
+}
+
+.headingIntro span::before {
+  content: "Web Developer";
+  animation: animate infinite 7s;
+  padding-left: 10px;
+  color: #000;
+}
+
+@keyframes animate {
+
+  0% {
+      content: "Web Developer";
+  }
+
+  25% {
+    content: "App Developer";
+  }
+
+  50% {
+      content: "UI/UX Designer";
+  }
+
+  75% {
+
+      content: "Programmer";
+  }
+  100% {
+
+    content: "Learner";
+}
+}
+
+
+.subHeadingIntroComponent {
+  animation: subHeading 2s;
+  color:#000;
+  opacity:0.5;
+  cursor: pointer;
+}
+
+.subHeadingIntroComponent:hover {
+  color:#000;
+  transform: scale(1.2);
+  opacity:0.8;
+  cursor: pointer;
+  transition:1.3s;
+} 
+
+
+/* ==========Animation======== */
+
+
+  
+@media screen and (max-width: 983px) {
+  .idCard{
+    width: 400px;
+    left: 20rem;
+  }
+
+  .scroll__down{
+    left: 46rem;
+  }
+    
+}
+
+  
+@media screen and (max-width: 600px) {
+  .idCard{
+    width: 400px;
+    left: 10rem;
+  }
+
+  .scroll__down{
+    left: 40rem;
+  }
+    
+}

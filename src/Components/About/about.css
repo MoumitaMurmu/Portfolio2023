@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+
+  
+#about{
+    /* padding: 3rem; */
+    /* border: 1px spold yellow; */
+    margin-top: 1.5rem;
+    padding: 0;
+    /* border: 1px solid yellow; */
+    height: 70vh;
+}
+
+
+.about__me{
+    height: 420px;
+    width: 400px;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(
+        45deg,
+        transparent, 
+        var(--color-primary), 
+        transparent
+        );
+    display: grid;
+    place-items: center; 
+    box-shadow: 0 6px 6px rgba(184, 92, 192, 0.2) !important; /* Modify these values as needed */
+  /* border: 1px solid yellow; */
+  margin-top:10rem ;
+}
+
+.about__me-image{
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+    cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39,
+    auto;
+
+}
+
+.about__me-image:hover{
+    transform: rotate(0);
+}
+
+/* =========MEDIA QUERIES(MEDIUM DEVICES)=========== */
+
+@media screen and (max-width: 1024px) {
+    .about__container {
+     margin-top: 8rem;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+  
+    .about__me {
+      width: 50%;
+      margin: 2rem auto 4rem;
+    }
+
+}
+  
+  /* =========MEDIA QUERIES(SMALL DEVICES)=========== */
+
+
+  @media screen and (max-width: 400px){
+      .about-me-para-body{
+        width: 600px;
+      }
+
+      .about__me{
+        height: 320px;
+      }
+
+      .about__me-image{
+        height: 500px;
+      }
+  }
